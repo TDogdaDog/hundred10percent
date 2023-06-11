@@ -1,5 +1,11 @@
 # hundred10percent
 
-this site was made to learn more about web development. please do not use my code without asking
+This site was made with the purpose of learning about web development.
 
-contact me on discord: TDog#1192
+
+## Use of hundred10percent
+
+Do not use my code without asking me first.
+
+## Contact
+**You can contact me via Discord:** TDog#1192
