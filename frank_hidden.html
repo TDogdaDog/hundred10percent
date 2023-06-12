@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <meta charset="utf-8">
+
+        <title>read the message</title>
+        <link rel="icon" type="image/x-icon" href="./images/favicon.ico">
+        <!-- Load external CSS styles -->
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Creepster">
+       <style>
+            body {
+                background-color: black;
+                text-align: center;
+                user-select: none;
+            }
+            #hidden {
+                border: none;
+                color: red;
+                padding-left: 300px;
+                padding-right: 300px;
+                padding-top: 150px;
+                background-color: black;
+                font-size: 50px;
+                cursor: help;
+                font-family: "Creepster", serif;
+            }
+        </style>
+    </head>
+    <body class="center">
+        <button id="hidden" onclick="messageF()"></button>
+        <p></p>
+        <img id="death" src="" width="350">
+        <script type="text/javascript">
+            function messageF() {
+            const array = ["Frank is not who he seems.","Dont trust the bird.","Knock 3 times at the bird house.","Dont. Feed. The. Bird.","Dont turn around. Hes behind you.","Frank is always watching.","Kill the bird.","Hes already won.","Surge daemonium, manifesta me.","Non pascere daemonium.","Dont pick up the feathers.", "avis inferorum"]
+            document.getElementById("hidden").innerHTML = array[Math.floor(Math.random() * array.length)]
+            document.getElementById("death").src = "./images/bloodybird.png"
+    }
+        </script>
+    </body>
+</html>

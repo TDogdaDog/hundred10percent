@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <meta charset="utf-8">
+
+        <title>Frank the Bird</title>
+        <link rel="icon" type="image/x-icon" href="./images/favicon.ico">
+        <!-- Load external CSS styles -->
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body>
+       <div class="topnav">
+            <a href="./index.html">Home</a>
+            <a href="./doorgame.html">Door Game</a>
+            <a href="./frank.html">Frank the Bird</a>
+            <a href="./word.html">Word Scramble</a>
+        </div>
+        <div class="center">
+
+        </div>
+        <div id="bird" class="center">
+            <h1 id="dead"></h1>
+            <button onclick="feed()"><img id="birdimg" src="./images/babybird.png" width="324"></button>
+            <h1>Frank the Bird</h1>
+            <h1 id="money">Money: 50</h1>
+            <h1 id="hunger">Hunger: 10, Food: 0</h1>
+            <button id="buyfood" onclick="buyfood()">Buy Food</button>
+        </div>
+        <script src="./birdgame.js"></script>
+    </body>
+
+</html>
