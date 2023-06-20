@@ -1,4 +1,5 @@
 let word = '';
+let winorlose = false;
 window.onload = () => {getWord()}
 
 function setup() {
@@ -7,6 +8,7 @@ function setup() {
   document.getElementById("playagain").style.visibility = "hidden";
   document.getElementById("correct").innerHTML = "";
   document.getElementById("guess").value = ""
+  winorlose = false;
 }
 
 function fetchWord() {
@@ -48,13 +50,17 @@ function shuffle(array) {
 }
 
 function submit() {
-  if(document.getElementById("guess").value == word) {
-    document.getElementById("winorlose").innerHTML = "You Win!";
-    document.getElementById("playagain").style.visibility = "visible";
-  } else {
-    document.getElementById("winorlose").innerHTML = "You lose!";
-    document.getElementById("playagain").style.visibility = "visible";
-    document.getElementById("correct").innerHTML = word;
-    document.getElementById("guess").value = ""
+  if (!winorlose) {
+    if(document.getElementById("guess").value == word) {
+      document.getElementById("winorlose").innerHTML = "You Win!";
+      document.getElementById("playagain").style.visibility = "visible";
+      winorlose = true;
+    } else {
+      document.getElementById("winorlose").innerHTML = "You lose!";
+      document.getElementById("playagain").style.visibility = "visible";
+      document.getElementById("correct").innerHTML = word;
+      document.getElementById("guess").value = ""
+      winorlose = true;
+    }
   }
 }
